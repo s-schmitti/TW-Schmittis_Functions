@@ -18,4 +18,5 @@
       TW_SF.showMessage(TW_SF.getLocalString("moneyDeposit"),60,depositCash)
     statePlayerInHomeTown()
   }
+  statePlayerInHomeTown()
 })()
