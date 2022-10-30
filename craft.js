@@ -1,5 +1,6 @@
 (async function(){
     console.log("extended Crafting")
+    await TW_SF.sleep(2)
     TW_SF.extendFunction(CharacterWindow.Crafting, "init", function(){
         for(let i = 0 ; i < document.getElementsByClassName("displayValue unselectable").length; i++){
             document.getElementsByClassName("displayValue unselectable")[i].onclick = function() {
