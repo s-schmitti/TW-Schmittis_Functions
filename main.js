@@ -69,8 +69,9 @@ let functionCollection = (function(){
     };
 })();
 let TW_SF = functionCollection.getTW_SF();
+
 (async function(){
-    let request = await fetch("https://raw.githubusercontent.com/s-schmitti/TW-Schmittis_Functions/feature/main.js/language.json")
+    let request = await fetch("https://s-schmitti.github.io/TW-Schmittis_Functions/language.json")
     let response = await request.json()
     TW_SF.languages = response;
     TW_SF.lang = Game.locale.split("_")[0];
@@ -80,14 +81,16 @@ let TW_SF = functionCollection.getTW_SF();
         return this.languages[item]["en"]
       return this.languages[item][this.lang]
     }
-})()
+})();
 
 (function(){
     fetch("https://s-schmitti.github.io/TW-Schmittis_Functions/scripts.csv")
         .then(response => response.text())
         .then(result => {console.log(result); result.split(",").forEach(function(file){
-	        if(!file.endsWith("user.js") && file != "main.js")
+	        if(!file.includes("schmitti.user.js") && file != "main.js"){
+				console.log(file)
 		        TW_SF.loadScript("https://s-schmitti.github.io/TW-Schmittis_Functions/" + file)
+			}
         })
     })
-})()
+})();
