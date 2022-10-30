@@ -15,7 +15,7 @@
     while(Character.position.x != Character.homeTown.x || Character.position.y != Character.homeTown.y)
       await TW_SF.sleep(0.1)
     if(Character.money > 100)
-      TW_SF.showMessage(TW_SF.getLocalString("moneyDeposit"),60,depositCash())
+      TW_SF.showMessage(TW_SF.getLocalString("moneyDeposit"),60,depositCash)
     statePlayerInHomeTown()
   }
 })()
