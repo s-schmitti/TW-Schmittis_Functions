@@ -1,0 +1,10 @@
+{
+  amount:{
+    de:"Anzahl",
+    en:"amount"
+  },
+  close:{
+    de:"Schließen",
+    en:"close"
+  }
+}

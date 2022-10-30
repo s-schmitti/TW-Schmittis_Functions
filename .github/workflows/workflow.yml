@@ -1,0 +1,26 @@
+name: workflow.yml
+
+on:
+  push:
+    branches: [ "main" ]
+    
+jobs:
+  github-page:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: create artifact folder
+        run: |
+          mkdir output
+          cp *.js output/
+          cp *.html output/
+          cp *.json output/
+          printf '%s\n' *.js | paste -sd "," - > output/scripts.csv
+    
+      - uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
