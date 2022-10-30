@@ -6,5 +6,9 @@
   "close":{
     "de":"Schließen",
     "en":"close"
+  },
+  "Crafting":{
+    "de":"Die Downtime für dein Crafting ist abgelaufen"
+    "en":"downtime expired for crafting"
   }
 }
