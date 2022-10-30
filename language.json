@@ -18,5 +18,13 @@
   "charPrem":{
     "de":"Du hast keinen Charakterpremium für den Fortkampf aktiv",
     "en":"you do not have character premium for the fort battle enabled"
+  },
+  "ok":{
+    "de":"OK",
+    "en":"OK"
+  },
+  "moneyDeposit":{
+    "de":"Bargeld einzahlen?",
+    "en":"deposit money?"
   }
 }
