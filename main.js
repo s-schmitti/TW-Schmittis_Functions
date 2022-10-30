@@ -14,7 +14,7 @@ let functionCollection = (function(){
             await new Promise(r => setTimeout(r, 1 + s * 1000));
         }
 
-        this.showMessage = async function (str,duration){
+        this.showMessage = async function (str,duration,callback){
             if(duration == undefined)
                 duration = 12
             let a = "";
@@ -23,7 +23,9 @@ let functionCollection = (function(){
             a.setX(500);
             a.show();
             a.setBlockGame(false);
-            a.addButton(languages.close[selectedLanguage], function(){})
+            a.addButton(this.getLocalString("close"), function(){})
+	    if(typeof callback == "function")
+	    	a.addButton(this.getLocalString("ok"),callback())
             await this.sleep(3+duration);
             a.hide();
         }
