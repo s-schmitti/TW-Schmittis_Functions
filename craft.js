@@ -40,9 +40,8 @@ function ReceipeWatchDog(id){
     }
 
     this.start = async function() {
-        await TW_SF.sleep(1 + Math.random()*60);
         while(true){
-            await TSK.sleep(5 + Math.random()*30);
+            await TSK.sleep(10);
             if(this.canCraft()){
                 TW_SF.showMessage(TW_SF.getLocalString("Crafting"), 3600)
                 return;
