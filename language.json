@@ -8,7 +8,15 @@
     "en":"close"
   },
   "Crafting":{
-    "de":"Die Downtime für dein Crafting ist abgelaufen"
+    "de":"Die Downtime für dein Crafting ist abgelaufen",
     "en":"downtime expired for crafting"
+  },
+  "fortbattleBuff":{
+    "de":"Du hast noch keinen Fortkampf-Buff eingenommen",
+    "en":"you do not have a buff for the upcomming fort battle"
+  },
+  "charPrem":{
+    "de":"Du hast keinen Charakterpremium für den Fortkampf aktiv",
+    "en":"you do not have character premium for the fort battle enabled"
   }
 }
